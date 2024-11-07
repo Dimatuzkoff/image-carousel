@@ -54,8 +54,6 @@ const getImageUrl = (url) => {
 @use '../assets/styles/variables' as *
 
 .carousel-image
-    width: 220px
-    height: 200px
     margin: 5px
     cursor: pointer
 

@@ -36,6 +36,7 @@ appStore.getImages();
 
     .carousel-images
         display: flex
+        justify-content: center
 
     .carousel-button
         font-size: 34px
@@ -54,14 +55,12 @@ appStore.getImages();
 
     .carousel-button.prev
         position: absolute
-        left: -25px
         &:hover,
         &:active
             border-radius: 10px 0 0 10px
 
     .carousel-button.next
         position: absolute
-        right: -25px
         &:hover,
         &:active
             border-radius: 0 10px 10px 0

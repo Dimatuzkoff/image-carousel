@@ -6,7 +6,7 @@ const appStore = useAppStore();
 <template>
   <div class="selected-images">
     <h3 v-if="appStore.selectedImages.length > 0">Links of selected images:</h3>
-    <h3 v-else style="margin: 0 auto">Select a image</h3>
+    <h3 v-else>Select a image</h3>
     <ul>
       <li v-for="url in appStore.selectedImages" :key="url">
         {{ url }}
@@ -18,4 +18,7 @@ const appStore = useAppStore();
 <style lang="sass" scoped>
 @use '../assets/styles/main'
 @use '../assets/styles/variables' as *
+
+h3
+    margin: 20px auto
 </style>
