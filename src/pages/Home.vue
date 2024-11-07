@@ -19,5 +19,6 @@ import SelectedUrl from "../components/SelectedUrl.vue";
     flex-direction: column
     align-items: center
     max-width: 1000px
-    margin: 80px auto
+    margin: 0 auto
+    padding: 80px 15px
 </style>
