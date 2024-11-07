@@ -1,10 +1,12 @@
 <script setup>
 import ImageCarousel from "../components/ImageCarousel.vue";
+import SelectedUrl from "../components/SelectedUrl.vue";
 </script>
 
 <template>
   <div class="carousel-container">
     <ImageCarousel />
+    <SelectedUrl />
   </div>
 </template>
 

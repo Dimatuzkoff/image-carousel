@@ -26,8 +26,8 @@ const nextImage = () => {
       <ImageItem class="desktop" index="3" />
       <ImageItem class="large-desktop" index="4" />
     </div>
-    <button @click="prevImage" class="carousel-button">‹</button>
-    <button @click="nextImage" class="carousel-button">›</button>
+    <button @click="prevImage" class="carousel-button prev">‹</button>
+    <button @click="nextImage" class="carousel-button next">›</button>
   </div>
 </template> 
 
@@ -40,4 +40,33 @@ const nextImage = () => {
 
     .carousel-images
         display: flex
+
+    .carousel-button
+        font-size: 34px
+        padding: 5px
+        top: 50%
+        transform: translateY(-50%)
+        border: none
+        cursor: pointer
+        background: none
+        &:active,
+        &:hover
+            background-color: #F0F0F0
+
+        &:active
+            scale: 1.1
+
+    .carousel-button.prev
+        position: absolute
+        left: -25px
+        &:hover,
+        &:active
+            border-radius: 10px 0 0 10px
+
+    .carousel-button.next
+        position: absolute
+        right: -25px
+        &:hover,
+        &:active
+            border-radius: 0 10px 10px 0
 </style>

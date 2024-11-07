@@ -31,8 +31,6 @@ const getImageUrl = (url) => {
 
   if (index === -1) appStore.selectedImages.push(url);
   else appStore.selectedImages.splice(index, 1);
-
-  console.log(appStore.selectedImages);
 };
 </script>
 
