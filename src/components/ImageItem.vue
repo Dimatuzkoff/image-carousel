@@ -1,7 +1,7 @@
 <script setup>
-import { ref, onMounted, computed, watch } from "vue";
+import { ref, watch } from "vue";
 import { useAppStore } from "../stores/AppStore";
-import { defineProps, defineEmits } from "vue";
+import { defineProps } from "vue";
 const appStore = useAppStore();
 const props = defineProps({
   index: {

@@ -1,20 +1,10 @@
 <script setup>
 import ImageItem from "./ImageItem.vue";
-
-import { ref, onMounted, onUnmounted, computed } from "vue";
 import { useAppStore } from "../stores/AppStore";
 
 const appStore = useAppStore();
 
 appStore.getImages();
-
-const prevImage = () => {
-  appStore.currentImageIndex--;
-};
-
-const nextImage = () => {
-  appStore.currentImageIndex++;
-};
 </script>
 
 <template>
@@ -26,8 +16,12 @@ const nextImage = () => {
       <ImageItem class="desktop" index="3" />
       <ImageItem class="large-desktop" index="4" />
     </div>
-    <button @click="prevImage" class="carousel-button prev">‹</button>
-    <button @click="nextImage" class="carousel-button next">›</button>
+    <button @click="appStore.currentImageIndex--" class="carousel-button prev">
+      ‹
+    </button>
+    <button @click="appStore.currentImageIndex++" class="carousel-button next">
+      ›
+    </button>
   </div>
 </template> 
 
