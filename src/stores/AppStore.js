@@ -3,8 +3,8 @@ import { defineStore } from 'pinia'
 import apiService from '../services/api';
 export const useAppStore = defineStore('app', {
     state: () => ({
-        title: 'Carousel',
-        images: []
+        images: [],
+        currentImageIndex: 0,
     }),
     actions: {
         async getImages() {

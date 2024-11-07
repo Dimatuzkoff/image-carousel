@@ -1,15 +1,10 @@
 <script setup>
-import { ref, onMounted } from "vue";
-import { useAppStore } from "../stores/AppStore";
-
-const appStore = useAppStore();
-
-appStore.getImages();
+import ImageCarousel from "../components/ImageCarousel.vue";
 </script>
 
 <template>
-  <div class="title">
-    <h1 v-if="appStore.title">{{ appStore.title }}</h1>
+  <div class="carousel-container">
+    <ImageCarousel />
   </div>
 </template>
 
@@ -17,6 +12,10 @@ appStore.getImages();
 @use '../assets/styles/main'
 @use '../assets/styles/variables' as *
 
-.title
-    color: $background
+.carousel-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 1000px
+    margin: 200px auto
 </style>
