@@ -5,6 +5,7 @@ export const useAppStore = defineStore('app', {
     state: () => ({
         images: [],
         currentImageIndex: 0,
+        selectedImages: []
     }),
     actions: {
         async getImages() {

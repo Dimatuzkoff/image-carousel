@@ -25,14 +25,29 @@ watch(
     }
   }
 );
+
+const getImageUrl = (url) => {
+  const index = appStore.selectedImages.indexOf(url);
+
+  if (index === -1) appStore.selectedImages.push(url);
+  else appStore.selectedImages.splice(index, 1);
+
+  console.log(appStore.selectedImages);
+};
 </script>
 
 <template>
   <img
     v-if="appStore.images.length > 0 && appStore.images[currentIndex]"
-    class="carousel-image"
+    @click="getImageUrl(appStore.images[currentIndex].download_url)"
     :src="appStore.images[currentIndex].download_url"
     alt="image"
+    :class="{
+      selected: appStore.selectedImages.includes(
+        appStore.images[currentIndex].download_url
+      ),
+    }"
+    class="carousel-image"
   />
 </template>
 
@@ -45,4 +60,8 @@ watch(
     height: 200px
     margin: 5px
     cursor: pointer
+
+.carousel-image.selected
+    border: 3px solid $selected
+    transform: scale(1.05)
 </style>
