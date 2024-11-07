@@ -1,5 +1,6 @@
 <script setup>
 import ImageItem from "./ImageItem.vue";
+import Loader from "./Loader.vue";
 import { useAppStore } from "../stores/AppStore";
 
 const appStore = useAppStore();
@@ -8,7 +9,8 @@ appStore.getImages();
 </script>
 
 <template>
-  <div class="carousel">
+  <Loader v-if="appStore.isLoading" :isFixed="true" />
+  <div v-else class="carousel">
     <div class="carousel-images">
       <ImageItem class="mobile" index="0" />
       <ImageItem class="tablet" index="1" />
