@@ -56,6 +56,8 @@ const getImageUrl = (url) => {
 .carousel-image
     margin: 5px
     cursor: pointer
+    box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d, 0 -6px 16px -6px #00000008
+    border-radius: 8px
 
 .carousel-image.selected
     border: 3px solid $selected
